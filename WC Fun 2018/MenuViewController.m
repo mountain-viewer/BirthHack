@@ -32,14 +32,14 @@
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (indexPath.row == 0) {
-        cell.cellLabel.text = @"Футболисты";
+        cell.cellLabel.text = @"Players";
         cell.cellLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
         cell.cellLabel.textColor = [UIColor blackColor];
         cell.imageName = @"rating";
         cell.alternativeImageName = @"rating_white";
         cell.cellImageView.image = [UIImage imageNamed:cell.imageName];
     } else if (indexPath.row == 1) {
-        cell.cellLabel.text = @"Мои матчи";
+        cell.cellLabel.text = @"Matches";
         cell.cellLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
         cell.cellLabel.textColor = [UIColor blackColor];
         cell.imageName = @"match";
@@ -47,21 +47,21 @@
         cell.cellImageView.image = [UIImage imageNamed:cell.imageName];
     } else if (indexPath.row == 2) {
         cell.cellImageView.image = [UIImage imageNamed:cell.imageName];
-        cell.cellLabel.text = @"Турнир";
+        cell.cellLabel.text = @"Predictions";
         cell.cellLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
         cell.cellLabel.textColor = [UIColor blackColor];
         cell.imageName = @"group";
         cell.alternativeImageName = @"group_white";
         cell.cellImageView.image = [UIImage imageNamed:cell.imageName];
     } else if (indexPath.row == 3) {
-        cell.cellLabel.text = @"Купить билеты";
+        cell.cellLabel.text = @"Tickets";
         cell.cellLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
         cell.cellLabel.textColor = [UIColor blackColor];
         cell.imageName = @"ticket";
         cell.alternativeImageName = @"ticket_white";
         cell.cellImageView.image = [UIImage imageNamed:cell.imageName];
     } else if (indexPath.row == 4) {
-        cell.cellLabel.text = @"Написать нам";
+        cell.cellLabel.text = @"Feedback";
         cell.cellLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
         cell.cellLabel.textColor = [UIColor blackColor];
         cell.imageName = @"mail";

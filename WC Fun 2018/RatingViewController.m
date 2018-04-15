@@ -43,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet UIView *chooseView;
 @property (weak, nonatomic) IBOutlet UIView *playerView;
 @property (nonatomic) NSUInteger counter;
+@property (strong, nonatomic) NSArray<NSNumber *> *ratings;
 
 @end
 
@@ -189,12 +190,15 @@
     
     NSUInteger sortedIndex = [self.sortedRating[indexPath.row] integerValue];
     
-    cell.playerLabel.text = [NSString stringWithFormat:@"%ld. %@ %@", indexPath.row + 1, self.names[sortedIndex], self.surnames[sortedIndex]];
+    cell.playerLabel.text = [NSString stringWithFormat:@"%@ %@", self.names[sortedIndex], self.surnames[sortedIndex]];
     
+    cell.indexLabel.text = [NSString stringWithFormat:@"%ld.", indexPath.row + 1];
+    cell.scoreLabel.text = [NSString stringWithFormat:@"Score: %@%%", self.ratings[indexPath.row]];
     cell.flagImageView.image = [UIImage imageNamed:self.flags[sortedIndex]];
     cell.flagImageView.layer.cornerRadius = cell.flagImageView.bounds.size.height / 2.0;
     cell.flagImageView.layer.borderWidth = 1.0;
     cell.flagImageView.layer.borderColor = [UIColor blackColor].CGColor;
+    
     
     return cell;
 }
@@ -230,6 +234,8 @@
     self.flags = @[@"be", @"ar", @"de", @"ar", @"fr", @"fr", @"ar", @"es", @"gb", @"uy", @"hr", @"de", @"pt", @"de", @"cl", @"es", @"es", @"gb"];
     
     self.sortedRating = @[@12, @1, @5, @0, @11, @9, @8, @7, @14, @3, @10, @13, @15, @4, @2, @17, @6, @16];
+    
+    self.ratings = @[@98.8, @93.3, @83.2, @74.2, @71.3, @69.2, @63.5, @57.2, @53.8, @47.1, @43.6, @41.9, @38.2, @34.2, @27.1, @24.3, @18.1, @15.7];
 }
 
 @end

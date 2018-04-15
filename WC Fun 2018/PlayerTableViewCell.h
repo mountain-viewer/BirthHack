@@ -10,7 +10,9 @@
 
 @interface PlayerTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *indexLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *flagImageView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 
 @end
